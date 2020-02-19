@@ -1,0 +1,35 @@
+<p>fourwheeler works!</p>
+<form>
+    Enter the Car: <select name="cars" (change)="changeCars($event.target.value)">
+        <option *ngFor="let car of carsList">{{car.name}}</option>
+      </select>
+      <br><h5 *ngIf="vCar">Mandatory field</h5><br><br>
+      
+
+
+    Enter the Car model:<select name="cars" (change)="changeModels($event.target.value)">
+        <option *ngFor="let model of carModelList">{{model}}</option>
+      </select>
+      <br><h5 *ngIf="vModel">Mandatory field</h5><br><br>
+      
+      
+      
+      Enter the variant : <select name="variant" (change) = "changeVariant($event.target.value)">
+        <option *ngFor="let variant of variantList">{{variant}}</option>
+      </select>
+    
+    Enter type of vehicle: <input type="text" name="typeOfVehicle" [(ngModel)]=ins.typeOfVehicle><br><br>
+    
+    Enter the driving Licence: <input type="text"name="licence" [(ngModel)]=ins.licenseNo><br><br>
+    
+    Enter purchasing date :<input type="number" name="ageOfCar" [(ngModel)]=ins.ageOfCar><br><br>
+    
+    Enter Engine Number :<input type="text" name="engineNumber" [(ngModel)]=ins.engineNo><br><br>
+    
+    Enter chassis number <input name="chassisNumber" [(ngModel)]=ins.chassisNo><br><br><br>
+    
+    Enter Car Purchasing Price <input [(ngModel)]=ins.vehiclePrice name="purchasingPrice"><br><br>
+    
+
+    <button class="btn btn-primary" (click)="showData()">SUBMIT</button>
+    </form>

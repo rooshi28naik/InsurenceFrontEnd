@@ -1,0 +1,38 @@
+<p>registration works!</p>
+
+  <form class="modal-content">
+  <div class="container">
+      <h1 style align="center" >Sign Up</h1>
+      <p style="background-color:powderblue;">Please fill in this form to create an account.</p>
+      <hr>
+     
+     <label for="name"><b>Name:</b></label>
+      <input type="text" placeholder="Enter Name" [(ngModel)]=user.name name="name" required><br>
+      <h5 *ngIf="nameV">Enter this field</h5>
+  
+      <label for="email"><b>Email:</b></label>
+      <input type="text" placeholder="Enter Email" [(ngModel)]=user.email name="email" required><br>
+      <h5 *ngIf="emailV">Not valid Email Address</h5>
+  
+      <label for="dob" ><b>DOB:</b></label>
+      <input type="date"  placeholder="Enter Your DOB" [(ngModel)]=user.dob name="dob" required> <br>
+      <h5 *ngIf="dateV">Date of birth is not Valid</h5>
+  
+      <label for="contactno"><b>Contacts:</b></label>
+      <input type="text" placeholder="Enter Your Number"  [(ngModel)]=user.contact name="number" required><br>
+      <h5 *ngIf="contactV">Contact Number is not valid</h5>
+     
+      <label for="address"><b>Address:</b></label>
+      <input type="text" placeholder="Enter Your Address"  [(ngModel)]=user.address name="address" required><br>
+      <h5 *ngIf="addrV">Please Enter this field</h5>
+  
+      <label for="psw"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" [(ngModel)]=user.password name="psw" required><br>
+      <h5 *ngIf="passV">Password must be of 8 character, with alphanumeric & Special character included</h5>
+  
+      <!--<label for="policy"><b>Policy No:</b></label>
+      <input type="text" placeholder="Enter Policy No" name="policy" ><br>
+      -->
+       <button type="submit"(click)="show()" class="btn btn-primary" align="center">Register</button>
+  </div>
+  </form>

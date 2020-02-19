@@ -1,0 +1,20 @@
+<p>twowheeler works!</p>
+<form >
+Enter the Bike: <select placeholder="Select Bike"  (change)="changeBike($event.target.value)" >
+    <option  *ngFor="let bike of bikes">{{bike.name}}</option>
+  </select>
+  <br><br>
+  
+Enter the Bike model:<select  placeholder="Select Model" (change)="changeModel($event.target.value)" >
+  <option *ngFor ="let model of modelslist">{{model}} </option>
+
+  </select>
+  <br><br>
+Enter the driving Licence: <input type="text" name="licence"[(ngModel)]=licence><br><br>
+Enter purchasing date :<input type="date"  name="purchaseDate" [(ngModel)]=purchase><br><br>
+Enter Engine :<input type="text" [(ngModel)]=engineNumber name="engineNumber"><br><br>
+Enter chassis number <input type="text" [(ngModel)]=chassis name="chassisNumber">
+<br>
+<button (click)="data()">SUBMIT</button>
+
+</form>
